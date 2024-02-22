@@ -1,0 +1,52 @@
+<html>
+    <head></head>
+    <body>
+        <table>
+            <tr><td><title>BRB Counter</title></td></tr>
+            <tr><td><a>Starting BRB amount</a></td><td><input type="number" id="starting_brb"></td></tr>
+            <tr><td><a>Current BRB amount</a></td><td><input type="number" id="current_brb"></td></tr>
+            <tr><td colspan="2"><center><button onclick="calculate()">Calculate</button></center></td></tr>
+            <tr><td colspan="2"><a id="semester_completion"></a></td></tr>
+            <tr><td colspan="2"><a id="brb_used"></a></td></tr>
+            <tr><td colspan="2"><a id="weekly_usage"></a></td></tr>
+            <tr><td colspan="2"><a id="daily_usage"></a></td></tr>
+            <tr><td colspan="2"><a id="comment"></a></td></tr>
+
+        </table>
+        <script>
+            function calculate() {
+                var starting_amount = document.getElementById("starting_brb").value
+                var current_amount = document.getElementById("current_brb").value
+                var semester_completion = document.getElementById("semester_completion")
+                var brb_used = document.getElementById("brb_used")
+                var weekly_usage = document.getElementById("weekly_usage")
+                var daily_usage = document.getElementById("daily_usage")
+
+                var current_date = new Date()
+                var start_date = new Date("1/22/2024")
+                var end_date = new Date("5/7/2024")
+
+                var total_days = difference_days(end_date, start_date)
+                var up_to_now = difference_days(current_date, start_date)
+                var days_left = difference_days(end_date, current_date)
+                var percentage_semester = up_to_now / total_days
+                var percentage_brbs = (starting_amount -current_amount) / starting_amount
+
+                semester_completion.innerHTML = "Percentage of semester completed:\t" + round(percentage_semester * 100, 2) + "%"
+                brb_used.innerHTML = "Percentage of BRBs used:\t" + round(percentage_brbs * 100, 2) + "%"
+                weekly_usage.innerHTML = "Projected weekly usage:\t$" + round(current_amount / days_left * 7,2)
+                daily_usage.innerHTML = "Projected daily usage:\t$" + round(current_amount / days_left, 2)
+
+            }
+
+            function difference_days(a, b) {
+                return Math.ceil((a.getTime() - b.getTime()) / 1000 / 3600 / 24)
+            }
+
+            function round(num, decimalPlaces = 0) {
+                num = Math.round(num + "e" + decimalPlaces)
+                return Number(num + "e" + -decimalPlaces)
+            }
+        </script>
+    </body>
+</html>

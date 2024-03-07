@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <body>
+        <div class="main_container">
+            <div class="title_div">
+                <a class="title_style">
+                    BRB Counter
+                </a>
+            </div>
+            <div class="input1_div">
+                <a>Starting BRB's: </a>
+                <input type="number" id="starting_brb" value="400">
+            </div>
+            <div class="input2_div">
+                <a>Current BRB's: </a>
+                <input type="number" id="current_brb">
+            </div>
+            <div class="button_div">
+                <button onclick="calculate()" class="button_style"><a>Calculate</a></button>
+            </div>
+            <div class="result_div">
+                <a id="semester_completion"></a>
+                <a id="brb_used"></a>
+                <a id="weekly_usage"></a>
+                <a id="daily_usage"></a>
+                <a id="comment"></a>
+                <div class="info_div" onclick="show_info()" id="info_button_div">
+                    <a class="info_button">i</a>
+                </div>
+            </div>
+        </div>
+        <div class="info_popup" id="info_popup">
+            <center><a class="popup_title">About the stats</a></center>
+            <br><br>
+            <a>The semester completion percentage is calculated based on today's date and the date of the last day of classes Spring 2024</a>
+            <br><br>
+            <a>Projected usage is how much you should spend to finish you BRBs by the last day of class</a>
+            <center><button onclick="close_popup()" class="close_button">Got it!</button></center>
+        </div>
+        <div class="footer">
+            <a class="footer_text">By Joshua Dirga 2024</a>
+        </div>
+    </body>
+</html>

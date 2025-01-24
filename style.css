@@ -1,0 +1,135 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+input {
+    font-size: 250%;
+    width: 25%;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.main_container {
+    background-color: rgb(253, 182, 182);
+    padding: 5%;
+    border-radius: 20px;
+    width: 70%;
+}
+
+.info_div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(116, 33, 33);
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.info_button {
+    background-color: none;
+    color: white;
+    border: none;
+    font-size: 30px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.info_popup {
+    visibility: hidden;
+    position: fixed;
+    z-index: 2;
+    background-color: rgb(116, 33, 33);
+    color: white;
+    width: 50%;
+    border-radius: 20px;
+    padding: 5%;
+}
+
+.popup_title {
+    color: white;
+    margin: 10px;
+    font-weight: 700;
+    font-size: 400%;
+}
+
+.close_button {
+    font-size: 300%;
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+    margin: 20px;
+    padding: 10px;
+    color:rgb(116, 33, 33);
+}
+
+
+.title_div {
+    display: block;
+    text-align: center;
+}
+
+.title_style {
+    font-weight: 700;
+    font-size: 70px;
+}
+
+.input1_div, .input2_div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.button_div {
+    margin: 10px;
+    text-align: center;
+}
+
+.button_style {
+    border-radius: 10px;
+    background-color: rgb(116, 33, 33);
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.result_div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#comment {
+    margin: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    margin: 10px;
+}
+
+.footer_text {
+    opacity: 50%;
+    font-size: 10px;
+}

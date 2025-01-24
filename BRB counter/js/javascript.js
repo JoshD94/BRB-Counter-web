@@ -8,8 +8,8 @@ function calculate() {
   var comment = document.getElementById("comment");
 
   var current_date = new Date();
-  var start_date = new Date("1/21/2024");
-  var end_date = new Date("5/17/2024");
+  var start_date = new Date("1/21/2025");
+  var end_date = new Date("5/17/2025");
 
   var total_days = difference_days(end_date, start_date);
   var up_to_now = difference_days(current_date, start_date);

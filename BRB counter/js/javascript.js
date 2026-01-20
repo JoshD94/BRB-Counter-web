@@ -8,8 +8,8 @@ function calculate() {
   var comment = document.getElementById("comment");
 
   var current_date = new Date();
-  var start_date = new Date("8/25/2025");
-  var end_date = new Date("12/11/2025");
+  var start_date = new Date("1/20/2026");
+  var end_date = new Date("5/16/2026");
 
   var total_days = difference_days(end_date, start_date);
   var up_to_now = difference_days(current_date, start_date);
@@ -27,8 +27,8 @@ function calculate() {
     "Projected daily usage:\t$" + (current_amount / days_left).toFixed(2);
   if (percentage_brbs < percentage_semester) {
     comment.innerHTML =
-      // "You are under-spending your BRBs!! Tip: as it is spring semester, use your BRB's before they get deleted :(";
-      "You are under-spending your BRBs!! Don't worry, your BRBs during the fall semester will be carried over to spring if not used! :D";
+      "You are under-spending your BRBs!! Tip: as it is spring semester, use your BRB's before they get deleted :(";
+      // "You are under-spending your BRBs!! Don't worry, your BRBs during the fall semester will be carried over to spring if not used! :D";
   } else if (percentage_brbs > percentage_semester) {
     comment.innerHTML =
       "You are over-spending your BRBs!! Maybe try hold back on spendings? :D";
